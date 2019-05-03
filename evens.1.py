@@ -1,15 +1,18 @@
+def is_even(num):
+    return num % 2 == 0
+
 def even_number_of_evens(numbers):
     
     evens = 0
 
     for item in numbers:
-        if item % 2 == 0:
+        if is_even(item):
             evens += 1
 
     if evens == 0:
         return False
     else:
-        return evens % 2 == 0
+        return is_even(evens)
         
 
 assert even_number_of_evens([]) == False, "No number"
