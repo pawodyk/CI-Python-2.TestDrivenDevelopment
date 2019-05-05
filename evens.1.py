@@ -3,16 +3,19 @@ def is_even(num):
 
 def even_number_of_evens(numbers):
     
-    evens = 0
+    # evens = 0
 
-    for item in numbers:
-        if is_even(item):
-            evens += 1
+    # for item in numbers:
+    #     if is_even(item):
+    #         evens += 1
 
-    if evens == 0:
-        return False
-    else:
-        return is_even(evens)
+    # if evens == 0:
+    #     return False
+    # else:
+    #     return is_even(evens)
+
+    evens = sum([1 for number in numbers if is_even(number)])
+    return False if evens == 0 else is_even(evens)
         
 
 assert even_number_of_evens([]) == False, "No number"
