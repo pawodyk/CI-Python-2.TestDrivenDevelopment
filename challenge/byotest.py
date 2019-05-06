@@ -20,3 +20,13 @@ def test_is_in(collection, item):
 def test_not_in(collection, item):
     assert item not in collection, "set {0} contains {1}".format(
         collection, item)
+
+
+# Challange 2
+
+def test_exception(f, args):
+    try:
+        f(*args)
+        assert False, "Exception did not occured!"
+    except Exception as ex:
+        print(str(ex))

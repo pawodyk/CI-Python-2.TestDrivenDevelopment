@@ -60,5 +60,8 @@ test_not_equal(get_change(35, usd_coins), [20, 10, 5])
 
 #while True: get_change(100)
 
+test_exception(get_change, (10, {5:1, 2:2}))
+#test_exception(get_change(7, {5: 1, 2: 2}))
+
 
 print("All test pass!")
