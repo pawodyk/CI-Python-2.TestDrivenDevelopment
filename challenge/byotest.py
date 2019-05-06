@@ -29,4 +29,4 @@ def test_exception(f, args):
         f(*args)
         assert False, "Exception did not occured!"
     except Exception as ex:
-        print(str(ex))
+        print("Exception Occured: " + str(ex))
