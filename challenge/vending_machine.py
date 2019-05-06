@@ -23,11 +23,11 @@ eur_coins = {100: 20, 50: 20, 20: 20, 10: 20, 5: 20, 2: 20, 1: 20}
 def get_change(amount, coins=eur_coins):
     change = []
 
-    for coin in coins.keys():
-        while coin <= amount:
-            amount -= coin
-            coins[coin] -= 1
-            change.append(coin)
+    for key in coins.keys():
+        while key <= amount and coins[key] > 0:
+            amount -= key
+            coins[key] -= 1
+            change.append(key)
 
     print(coins)
     print(change)
@@ -55,11 +55,11 @@ test_are_equal(get_change(35, usd_coins), [25, 10])
 test_are_equal(get_change(35), [20, 10, 5])
 test_not_equal(get_change(35, usd_coins), [20, 10, 5])
 
-print(get_change(555))
-print(get_change(555))
-print(get_change(555))
-print(get_change(555))
-print(get_change(555))
+get_change(555)
+get_change(555)
+get_change(555)
+get_change(555)
+get_change(555)
 
 
 
