@@ -1,3 +1,6 @@
+numbers = [1, 2, 3, 4, 5]
+
+
 def number_of_evens(numbers):
     return 0
 
@@ -15,5 +18,8 @@ def test_is_in(collection, item):
         collection, item)
 
 
-test_are_equal(number_of_evens([1, 2, 3, 4, 5]), 2)
+test_are_equal(number_of_evens(numbers), 2)
 
+test_not_equal(number_of_evens(numbers), 0)
+
+test_is_in(numbers, 0)
